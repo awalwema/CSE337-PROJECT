@@ -1,0 +1,25 @@
+
+
+ul
+{
+	list-style: none;
+}
+
+table
+{
+	margin: 0 auto;
+}
+
+#expqs p{
+	padding-left: 150px;
+}
+
+#interests p{
+	padding-left: 150px;
+}
+
+#register 
+{
+	width:100px;
+	margin-left: 600px;
+}
