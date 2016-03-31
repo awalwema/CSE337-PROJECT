@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
 
     <head>
@@ -68,7 +69,6 @@
             <!-- Full Width Image Header with Logo -->
             <!-- Image backgrounds are set within the full-width-pics.css file. -->
         <header class="image-bg-fluid-height">
-            <img class="img-responsive img-center" src="http://placehold.it/200x200&text=Logo" alt="">
         </header>
 
             <!-- Content Section -->
@@ -76,7 +76,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="section-heading text-danger">Welcome to Project Name</h1>
+
+                        <?php
+                                
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                                                        echo '<h1 class="section-heading text-danger">Welcome to Project Name </h1>' . $_SESSION['username'] . "!";
+} else {
+    echo '<h1 class="section-heading text-danger">AWelcome to Project Name</h1>';
+}
+ ?>
+                        
                         <p class="lead section-lead">Header information about project goes here</p>
                         <p class="section-paragraph">blah blah blah</p>
                     </div>

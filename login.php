@@ -2,28 +2,30 @@
 
 <?php
 session_start();
-if(isset($_POST['btn-login'])){
-$username = strtolower(strip_tags($_POST[ 'username' ]));
-$password = strtolower(strip_tags($_POST[ 'password' ]));
-$_SESSION['Error'] = "You left one or more of the required fields.";
-if ($username&&$password)
-{
-$connect = mysql_connect ( "localhost", "root" , "") or die ("Couldn't connect!");
-mysql_select_db("FANTASY") or die ("Couldn't find db");
+if (isset($_POST['sign-in'])) {
 
-$query = mysql_query("SELECT * FROM USER WHERE USER_PASSWORD ='$password' AND USER_SCREENNAME='$username'", $connect);
+    $connect = mysql_connect("localhost", "root", "") or die ("Couldn't connect!");
+    mysql_select_db("FANTASY") or die ("Couldn't find db");
 
-if (mysql_num_rows($query) == 1)
-{
-$_SESSION['username']= $username; // Initializing Session
-$_SESSION['loggedin'] = true;
-header("location: home.php"); // Redirecting To Other Page
-}
-else {$msg="Incorrect username and password!";
+    $username = strtolower(strip_tags($_POST[ 'username' ]));
+    $password = strtolower(strip_tags($_POST[ 'password' ]));
+    $_SESSION['Error'] = "You left one or more of the required fields.";
+    if ($username&&$password) {
+            
 
-echo $msg;}
-}
-mysql_close($connect); // Closing Connection
+        $query = mysql_query("SELECT * FROM USER WHERE USER_PASSWORD ='$password' AND USER_SCREENNAME='$username'", $connect);
+
+        if (mysql_num_rows($query) == 1) {
+            $_SESSION['username']= $username; // Initializing Session
+            $_SESSION['loggedin'] = true;
+            header("location: home.php"); // Redirecting To Other Page
+        } else {
+            $msg="Incorrect username and password!";
+
+            echo $msg;
+        }
+    }
+    mysql_close($connect); // Closing Connection
 }
 ?>
 
@@ -41,7 +43,7 @@ mysql_close($connect); // Closing Connection
             <!-- Bootstrap Core CSS -->
         <link rel="stylesheet" type="text/css" href = "css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href = "css/style.css">
-
+        <link rel="stylesheet" type="text/css" href="css/signinstyle.css">
         <link rel="stylesheet" type="text/css" href = "css/full-width-pics.css" rel="stylesheet">
 
             <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -52,33 +54,48 @@ mysql_close($connect); // Closing Connection
     <![endif]-->
 </head>
 <body>
-   <div id="title"
-        
-    
-				<center>
-				<div id="login-form" >
-						<form method="post">
-									<table align="center" width="30%" border="0">
-											<tr><td><p> Username:<p></td>
-											<td><input type="text" name="username" placeholder="Username" required /></td>
-											</tr>
-											<tr><td><p> Password:<p></td>
-											<td><input type="password" name="password" placeholder="Your Password" required /></td>
-											</tr>
-											<tr><td></td>
-											<td><button type="submit" name="btn-login">Sign In</button></td>
-											</tr>
-											<tr><td></td>
-											<td><a href="registration.php">Sign Up Here</a></td>
-											</tr>
-									</table>
-						      </form>
-				 </div>
 
+    <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
+                </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="home.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="login.php">Login</a>
+                        </li>
+                        <li>
+                            <a href="registration.php">Register</a>
+                        </li>
+                        <li>
+                            <a href="contactus.php">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="aboutus.php">About Us</a>
+                        </li>
+                    </ul>
+                </div>
+                    <!-- /.navbar-collapse -->
+            </div>
+                <!-- /.container -->
+        </nav>
 
-				
-	</div>
+          <header class="image-bg-fluid-height">
+
+        </header>
 
 <section>
             <div class="container">
@@ -91,10 +108,10 @@ mysql_close($connect); // Closing Connection
                             <div id="login-form" class="login-page">
                                 <div class="form">
                                     <h2 class="lead section-lead text-danger">Login:</h2><br>
-                                    <form method="post" class="login-form">
-                                        <input type="text" name "username" placeholder="username"/>
-                                        <input type="password" name "password" placeholder="password"/>
-                                        <button type="submit" name="btn-login">login</button>
+                                    <form method="post" >
+                                        <input type="text" name ="username" placeholder="username"/>
+                                        <input type="password" name ="password" placeholder="password"/>
+                                        <button type="submit" name="sign-in">login</button>
                                         <p class="message">Not registered? <a href="registration.php">Create an account</a></p>
                                     </form>
                                 </div>
@@ -102,9 +119,6 @@ mysql_close($connect); // Closing Connection
                             <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 
                             <script src="js/index.js"></script>
-
-
-
 
                         </body>
                     </div>
