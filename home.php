@@ -42,24 +42,32 @@
 
                 </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                         <li>
                             <a href="home.php">Home</a>
-                        </li>
-                        <li>
+                         </li>
+                         <li>
                             <a href="login.php">Login</a>
-                        </li>
-                        <li>
+                         </li>
+                         <li>
                             <a href="registration.php">Register</a>
-                        </li>
-                        <li>
+                         </li>
+                         <li>
                             <a href="contactus.php">Contact Us</a>
-                        </li>
-                        <li>
+                         </li>
+                         <li>
                             <a href="aboutus.php">About Us</a>
-                        </li>
-                    </ul>
+                         </li>
+
+                        </ul>
+                        <ul float:right class="nav navbar-nav navbar-right navbar-text">
+                         <li class="active">
+                             <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
+                         </li>
+
+                        </ul>
+
                 </div>
                     <!-- /.navbar-collapse -->
             </div>
@@ -80,14 +88,14 @@
                         <?php
                                 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                                                        echo '<h1 class="section-heading text-danger">Welcome to Project Name </h1>' . $_SESSION['username'] . "!";
+
 } else {
-    echo '<h1 class="section-heading text-danger">AWelcome to Project Name</h1>';
+    echo '<h1 class="section-heading text-danger">Welcome to Character Creator!</h1>';
 }
  ?>
                         
-                        <p class="lead section-lead">Header information about project goes here</p>
-                        <p class="section-paragraph">blah blah blah</p>
+                        <p class="lead section-lead">This website will allow you to easily create your own Wanderlust Character sheet</p>
+                        <p class="section-paragraph">Login and then click the Create Character tab to start!(not yet implemented)</p>
                     </div>
                 </div>
             </div>

@@ -60,6 +60,13 @@
                             <a href="aboutus.php">About Us</a>
                         </li>
                     </ul>
+                     </ul>
+                          <ul float:right class="nav navbar-nav navbar-right navbar-text">
+                            <li class="active">
+                             <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
+                            </li>
+
+                     </ul>
                 </div>
                     <!-- /.navbar-collapse -->
             </div>
