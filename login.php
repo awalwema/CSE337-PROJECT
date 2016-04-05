@@ -1,5 +1,6 @@
 
-
+<?php error_reporting(0); ?>
+<?php $user = $_COOKIE['username']; ?>
 <?php
 session_start();
 if (isset($_POST['sign-in'])) {
@@ -19,6 +20,7 @@ if (isset($_POST['sign-in'])) {
             $_SESSION['username']= $username; // Initializing Session
             $_SESSION['loggedin'] = true;
             header("location: home.php"); // Redirecting To Other Page
+            setcookie('username', $_POST['username'], time()+60*60*60*24*365);
         } else {
             $msg="Incorrect username and password!";
 
@@ -85,6 +87,19 @@ if (isset($_POST['sign-in'])) {
                         </li>
                         <li>
                             <a href="aboutus.php">About Us</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right navbar-text">
+                        <li class="active">
+                            <?php if (($_SESSION['username']) != $user) : ?>
+
+                                <a href="login.php">Login</a>
+
+                            <?php else : ?>
+                                <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
+                                <a href="logout.php"> Logout </a>
+                            <?php endif; ?>
+
                         </li>
                     </ul>
                 </div>

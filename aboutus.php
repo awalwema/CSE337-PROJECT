@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
+<?php $user = $_COOKIE['username']; ?>
+<?php error_reporting(0); ?>
 <html lang="en">
 
         <head>
@@ -60,13 +63,20 @@
                             <a href="aboutus.php">About Us</a>
                         </li>
                     </ul>
-                     </ul>
-                          <ul float:right class="nav navbar-nav navbar-right navbar-text">
-                            <li class="active">
-                             <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
-                            </li>
+                    <ul class="nav navbar-nav navbar-right navbar-text">
+                        <li class="active">
+                            <?php if (($_SESSION['username']) != $user) : ?>
 
-                     </ul>
+                                <a href="login.php">Login</a>
+
+                            <?php else : ?>
+                                <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
+                                <a href="logout.php"> Logout </a>
+                            <?php endif; ?>
+
+                        </li>
+
+                    </ul>
                 </div>
                     <!-- /.navbar-collapse -->
             </div>

@@ -1,4 +1,5 @@
-
+<?php session_start(); ?>
+<?php error_reporting(0); ?>
 <?php
 
 require 'dbconnect.php';
@@ -46,7 +47,7 @@ if ($username&&$firstname&&$lastname&&$password&&$confirmpassword)
 	echo"Please fill in <b>all </b> fields!";
 }
 ?>
-
+<?php $user = $_COOKIE['username']; ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -107,6 +108,20 @@ if ($username&&$firstname&&$lastname&&$password&&$confirmpassword)
                         <li>
                             <a href="aboutus.php">About Us</a>
                         </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right navbar-text">
+                        <li class="active">
+                            <?php if (($_SESSION['username']) != $user) : ?>
+
+                                <a href="login.php">Login</a>
+
+                            <?php else : ?>
+                                <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
+                                <a href="logout.php"> Logout </a>
+                            <?php endif; ?>
+
+                        </li>
+
                     </ul>
                 </div>
                     <!-- /.navbar-collapse -->
