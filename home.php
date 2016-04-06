@@ -50,9 +50,6 @@
                             <a href="home.php">Home</a>
                          </li>
                          <li>
-                            <a href="login.php">Login</a>
-                         </li>
-                         <li>
                             <a href="registration.php">Register</a>
                          </li>
                          <li>
@@ -63,18 +60,22 @@
                          </li>
 
                         </ul>
-                        <ul class="nav navbar-nav navbar-right navbar-text">
+                        <ul class="nav navbar-nav navbar-right ">
+                          <?php if (($_SESSION['username']) != $user) : ?>
                          <li class="active">
-                             <?php if (($_SESSION['username']) != $user) : ?>
+
 
                                  <a href="login.php">Login</a>
-
-                             <?php else : ?>
+                         </li>
+                         <?php else : ?>
+                         <li class="nav navbar-text">
                                  <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
-                                 <a href="logout.php"> Logout </a>
-                             <?php endif; ?>
 
                          </li>
+                         <li>
+                         <a href="logout.php"> Logout </a>
+                         </li>
+                          <?php endif; ?>
 
                         </ul>
 

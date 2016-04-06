@@ -44,40 +44,43 @@
                     </button>
 
                 </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="home.php">Home</a>
-                        </li>
-                        <li>
-                            <a href="login.php">Login</a>
-                        </li>
-                        <li>
-                            <a href="registration.php">Register</a>
-                        </li>
-                        <li>
-                            <a href="contactus.php">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="aboutus.php">About Us</a>
-                        </li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right navbar-text">
-                        <li class="active">
-                            <?php if (($_SESSION['username']) != $user) : ?>
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav">
+                                         <li>
+                                            <a href="home.php">Home</a>
+                                         </li>
+                                         <li>
+                                            <a href="registration.php">Register</a>
+                                         </li>
+                                         <li>
+                                            <a href="contactus.php">Contact Us</a>
+                                         </li>
+                                         <li>
+                                            <a href="aboutus.php">About Us</a>
+                                         </li>
 
-                                <a href="login.php">Login</a>
+                                        </ul>
+                                        <ul class="nav navbar-nav navbar-right ">
+                                          <?php if (($_SESSION['username']) != $user) : ?>
+                                         <li class="active">
 
-                            <?php else : ?>
-                                <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
-                                <a href="logout.php"> Logout </a>
-                            <?php endif; ?>
 
-                        </li>
+                                                 <a href="login.php">Login</a>
+                                         </li>
+                                         <?php else : ?>
+                                         <li class="nav navbar-text">
+                                                 <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
 
-                    </ul>
-                </div>
+                                         </li>
+                                         <li>
+                                         <a href="logout.php"> Logout </a>
+                                         </li>
+                                          <?php endif; ?>
+
+                                        </ul>
+
+                                </div>
                     <!-- /.navbar-collapse -->
             </div>
                 <!-- /.container -->
