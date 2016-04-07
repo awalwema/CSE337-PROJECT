@@ -73,14 +73,11 @@ if (isset($_POST['sign-in'])) {
                     <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                        <li class="active">
+                            <?php if (($_SESSION['username']) != $user) : ?>
+
                         <li>
                             <a href="home.php">Home</a>
-                        </li>
-                        <li>
-                            <a href="login.php">Login</a>
-                        </li>
-                        <li>
-                            <a href="registration.php">Register</a>
                         </li>
                         <li>
                             <a href="contactus.php">Contact Us</a>
@@ -88,12 +85,33 @@ if (isset($_POST['sign-in'])) {
                         <li>
                             <a href="aboutus.php">About Us</a>
                         </li>
+
+                        <?php else : ?>
+
+                                <li>
+                                    <a href="home.php">Home</a>
+                                </li>
+                                <li>
+                                    <a href="contactus.php">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="aboutus.php">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="charactersheet.php">Character Sheet</a>
+                                </li>
+
+                        <?php endif; ?>
+
+                        </li>
+
                     </ul>
                     <ul class="nav navbar-nav navbar-right navbar-text">
                         <li class="active">
                             <?php if (($_SESSION['username']) != $user) : ?>
 
-                                <a href="login.php">Login</a>
+                                <li><a href="login.php"> Log In</a></li>
+                                <li><a href="registration.php"> Register</a></li>
 
                             <?php else : ?>
                                 <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
@@ -109,7 +127,7 @@ if (isset($_POST['sign-in'])) {
         </nav>
 
           <header class="image-bg-fluid-height">
-
+            <img class="img-rounded img-responsive img-center" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/5459b646539419.5607d7390e203.png" width="200" height="200">
         </header>
 
 <section>

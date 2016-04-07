@@ -47,14 +47,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
+                        <li class="active">
+                            <?php if (($_SESSION['username']) != $user) : ?>
+
                         <li>
                             <a href="home.php">Home</a>
-                        </li>
-                        <li>
-                            <a href="login.php">Login</a>
-                        </li>
-                        <li>
-                            <a href="registration.php">Register</a>
                         </li>
                         <li>
                             <a href="contactus.php">Contact Us</a>
@@ -62,12 +59,34 @@
                         <li>
                             <a href="aboutus.php">About Us</a>
                         </li>
+
+                        <?php else : ?>
+
+                                <li>
+                                    <a href="home.php">Home</a>
+                                </li>
+                                <li>
+                                    <a href="contactus.php">Contact Us</a>
+                                </li>
+                                <li>
+                                    <a href="aboutus.php">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="charactersheet.php">Character Sheet</a>
+                                </li>
+
+                        <?php endif; ?>
+
+                        </li>
+
                     </ul>
+                    
                     <ul class="nav navbar-nav navbar-right navbar-text">
                         <li class="active">
                             <?php if (($_SESSION['username']) != $user) : ?>
 
-                                <a href="login.php">Login</a>
+                                <li><a href="login.php"> Log In</a></li>
+                                <li><a href="registration.php"> Register</a></li>
 
                             <?php else : ?>
                                 <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
@@ -86,7 +105,7 @@
             <!-- Full Width Image Header with Logo -->
             <!-- Image backgrounds are set within the full-width-pics.css file. -->
         <header class="image-bg-fluid-height">
-            <img class="img-responsive img-center" src="http://placehold.it/200x200&text=Logo" alt="">
+            <img class="img-rounded img-responsive img-center" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/5459b646539419.5607d7390e203.png" width="200" height="200">
         </header>
 
             <!-- Content Section -->
@@ -96,42 +115,48 @@
                     <div class="col-lg-12">
                         <h1 class="section-heading text-danger">About Us</h1><br>
 
-                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-right" width="500" height="400">
+                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-right" width="500" height="300">
 
                         <div class="panel panel-success">
 
                         <h3 class="text-success panel-heading">Our Team</h3>
                         <p class="section-paragraph panel-body">
+                        <br>
                             We take great pride in providing you with the best experience on our site.  Browse through our team
                             members below and gain some background information on them.  If you have any questions or concerns,
-                            please go to our <a href="@routes.ContactUsController.contactUs()">Contact Us</a>
+                            please go to our <a href="contactus.php">Contact Us</a>
                             page.
                         </p>
 
                         <h3 class="text-success panel-heading">Kyle Thornton:</h3>
                         <p class="section-paragraph panel-body">
                             Major -
-                            <br>Knows -
+                            <br><br>
+                            Project Contribution -
                         </p>
                         <h3 class="text-success panel-heading">Matthew Vasilakis:</h3>
                         <p class="section-paragraph panel-body">
                             Major - Computer Science
-                                <br>Knows - Java, HTML, CSS
+                            <br><br>
+                            Project Contribution -
                         </p>
                         <h3 class="text-success panel-heading">Andrew Walwema:</h3>
                         <p class="section-paragraph panel-body">
                             Major -
-                            <br>Knows -
+                            <br><br>
+                            Project Contribution -
                         </p>
                         <h3 class="text-success panel-heading">Brianna Kearney:</h3>
                         <p class="section-paragraph panel-body">
                             Major -
-                            <br>Knows -
+                            <br><br>
+                            Project Contribution -
                         </p>
                         <h3 class="text-success panel-heading">Brandon Jackson:</h3>
                         <p class="section-paragraph panel-body">
                             Major -
-                            <br>Knows -
+                            <br><br>
+                            Project Contribution -
                         </p>
                         </div>
                     </div>

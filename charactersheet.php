@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<?php session_start(); ?>
+<?php session_start();?>
 <?php $user = $_COOKIE['username']; ?>
 <?php error_reporting(0); ?>
+
 <html lang="en">
 
-    <head>
+        <head>
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +29,7 @@
 
     </head>
 
+
     <body>
 
             <!-- Navigation -->
@@ -44,7 +46,7 @@
 
                 </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="active">
                             <?php if (($_SESSION['username']) != $user) : ?>
@@ -79,22 +81,23 @@
                         </li>
 
                     </ul>
-                        <ul class="nav navbar-nav navbar-right navbar-text">
-                         <li class="active">
-                             <?php if (($_SESSION['username']) != $user) : ?>
 
-                                 <li><a href="login.php"> Log In</a></li>
+                    <ul class="nav navbar-nav navbar-right navbar-text ">
+                        <li class="active">
+                            <?php if (($_SESSION['username']) != $user) : ?>
+
+                                
+                                <li><a href="login.php"> Log In</a></li>
                                 <li><a href="registration.php"> Register</a></li>
 
-                             <?php else : ?>
-                                 <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
-                                 <a href="logout.php"> Logout </a>
-                             <?php endif; ?>
+                            <?php else : ?>
+                                <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
+                                <a href="logout.php"> Logout </a>
+                            <?php endif; ?>
 
-                         </li>
+                        </li>
 
-                        </ul>
-
+                    </ul>
                 </div>
                     <!-- /.navbar-collapse -->
             </div>
@@ -112,30 +115,44 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
+                        <h1 class="section-heading text-danger">Your Character</h1><br>
 
-                        <?php
-                                
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+                        <div class="panel panel-info">
 
-} else {
-    echo '<h1 class="section-heading text-danger">Welcome to Character Creator!</h1>';
-}
- ?>
-                        <p class="lead section-lead">This website will allow you to easily create your own Wanderlust Character sheet</p>
-                        <br>
-                        <p class="section-paragraph text-success" >Login or Register now by clicking on the corresponding tab in the upper <br> right corner
-                        of the page.  Once you are logged in, click the Character Sheet <br> tab on the navigational menu to edit or start
-                        creating your character!
-
-                        <img class="img-responsive pull-right" src="http://villageoffaith.org/uploads/6/2/2/8/62282299/1370146_orig.png" alt="">
-
+                        <h3 class="text-info panel-heading"><a href="bio.php">Bio</a></h3>
+                        <p class="section-paragraph panel-body">
+                            text here returned from database
                         </p>
+
+                        <h3 class="text-info panel-heading"><a href="skilldefense.php">Skills & Defenses</a></h3>
+                        <p class="section-paragraph panel-body">
+                            text here returned from database
+                        </p>
+                        <h3 class="text-info panel-heading"><a href="abilities.php">Abilities</a></h3>
+                        <p class="section-paragraph panel-body">
+                            text here returned from database
+                        </p>
+                        <h3 class="text-info panel-heading"><a href="combatpowers.php">Combat Powers</a></h3>
+                        <p class="section-paragraph panel-body">
+                            text here returned from database
+                        </p>
+                        <h3 class="text-info panel-heading"><a href="features.php">Features</a></h3>
+                        <p class="section-paragraph panel-body">
+                            text here returned from database
+                        </p>
+                        <h3 class="text-info panel-heading"><a href="specialmoves.php">Special Moves</a></h3>
+                        <p class="section-paragraph panel-body">
+                            text here returned from database
+                        </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-            <!-- Fixed Height Image Aside -->
+
+
+        <!-- Fixed Height Image Aside -->
             <!-- Image backgrounds are set within the full-width-pics.css file. -->
 
 
@@ -162,5 +179,3 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         <script src='@routes.Assets.versioned("javascripts/bootsatrap.min.js")'></script>
 
     </body>
-
-</html>
