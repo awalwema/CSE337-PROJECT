@@ -125,15 +125,56 @@
                         <h3 class="text-warning panel-heading">Skills & Defenses</a></h3>
                         <br><br>
                         <form class="form-horizontal">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 1</label>
+                            <h1>Skills</h1>
+                            <br>
+                            <div class="text">
+                                <label for="aracana"> Arcana </label>
+                                <input type="text" name = "arcana" placeholder="Enter Points"/>
+                                <p>Arcana is your ability to interact with and understand Magic. It’s Analyzing and
+                                Manipulating magical effects, similar to how Dexterity can fiddle with traps or machines.</p>
                             </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 2</label>
+                            <div class="text">
+                                <label for="dexterity"> Dexterity </label>
+                                <input type="text" name = "dexterity" placeholder="Enter Points"/>
+                                <p>Dexterity is your Fine Motor Skills - lock-picking, machine-jiggering and
+                                trap-disabling/resetting.  Dexterity also governs aiming in non-combat situations,
+                                like tossing a rock and hitting a lever across the room.</p>
                             </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 3</label>
+                            <div class="text">
+                                <label for="heal"> Heal </label>
+                                <input type="text" name = "heal" placeholder = "Enter Points"/>
+                                <p>Heal is your ability to remove Afflictions, analyze wounds, diseases etc</p>
                             </div>
+                            <div class="text">
+                                <label for= "insight"> Insight </label>
+                                <input type= "text" name = "insight" placeholder = "Enter Points"/>
+                                <p>Insight is like your social perception. It’s reading peoples' expressions, tones of
+                                voice and similar to determine what they're feeling and whether they're lying.</p>
+                            </div>
+                            <div class="text">
+                                <label for= "might"> Might </label>
+                                <input type= "text" name = "might" placeholder = "Enter Points"/>
+                                <p>Might is your physical strength - swimming against the current, leaping wide chasms,
+                                breaking down doors</p>
+                            </div>
+                            <div class="text">
+                                <label for= "perception"> Perception </label>
+                                <input type= "text" name = "perception" placeholder = "Enter Points"/>
+                                <p>Perception is your ability to notice things with your physical senses (all of them –
+                                sight, hearing, touch, smell, etc.)</p>
+                            </div>
+                            <div class="text">
+                                <label for= "Stealth"> Stealth </label>
+                                <input type= "text" name = "stealth" placeholder = "Enter Points"/>
+                                <p>Stealth is your ability to move about discretely - to successfully stay quiet and avoid being noticed. </p>
+                            </div>
+                            <div class="text">
+                                <label for= "generalknowledge"> General Knowledge </label>
+                                <input  data-toggle="tooltip" title=""type= "text" name = "generalknowledge" placeholder = "Enter Points"/>
+                                <p>Your knowledge of things that don’t fall into the other skills. Who's the king of
+                                this land? What’s the historical significance of the strange coin you just found?
+                                How do you cook a decent meal? Which mushrooms are safe to eat?</p>
+
                         </form>
                         <br>
 
