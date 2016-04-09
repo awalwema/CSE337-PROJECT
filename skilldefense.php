@@ -128,52 +128,83 @@
                             <h1>Skills</h1>
                             <br>
                             <div class="text">
-                                <label for="aracana"> Arcana </label>
+                                <label for="aracana"> Arcana: &nbsp</label>
                                 <input type="text" name = "arcana" placeholder="Enter Points"/>
                                 <p>Arcana is your ability to interact with and understand Magic. It’s Analyzing and
                                 Manipulating magical effects, similar to how Dexterity can fiddle with traps or machines.</p>
                             </div>
+                            <br>
                             <div class="text">
-                                <label for="dexterity"> Dexterity </label>
+                                <label for="dexterity"> Dexterity:   &nbsp</label>
                                 <input type="text" name = "dexterity" placeholder="Enter Points"/>
                                 <p>Dexterity is your Fine Motor Skills - lock-picking, machine-jiggering and
                                 trap-disabling/resetting.  Dexterity also governs aiming in non-combat situations,
                                 like tossing a rock and hitting a lever across the room.</p>
                             </div>
+                            <br>
                             <div class="text">
-                                <label for="heal"> Heal </label>
+                                <label for="heal"> Heal:   &nbsp</label>
                                 <input type="text" name = "heal" placeholder = "Enter Points"/>
                                 <p>Heal is your ability to remove Afflictions, analyze wounds, diseases etc</p>
                             </div>
+                            <br>
                             <div class="text">
-                                <label for= "insight"> Insight </label>
+                                <label for= "insight"> Insight:    &nbsp </label>
                                 <input type= "text" name = "insight" placeholder = "Enter Points"/>
                                 <p>Insight is like your social perception. It’s reading peoples' expressions, tones of
                                 voice and similar to determine what they're feeling and whether they're lying.</p>
                             </div>
+                            <br>
                             <div class="text">
-                                <label for= "might"> Might </label>
+                                <label for= "might"> Might:     &nbsp</label>
                                 <input type= "text" name = "might" placeholder = "Enter Points"/>
                                 <p>Might is your physical strength - swimming against the current, leaping wide chasms,
                                 breaking down doors</p>
                             </div>
+                            <br>
                             <div class="text">
-                                <label for= "perception"> Perception </label>
+                                <label for= "perception"> Perception:    &nbsp </label>
                                 <input type= "text" name = "perception" placeholder = "Enter Points"/>
                                 <p>Perception is your ability to notice things with your physical senses (all of them –
                                 sight, hearing, touch, smell, etc.)</p>
                             </div>
+                            <br>
                             <div class="text">
-                                <label for= "Stealth"> Stealth </label>
+                                <label for= "Stealth"> Stealth:   &nbsp  </label>
                                 <input type= "text" name = "stealth" placeholder = "Enter Points"/>
                                 <p>Stealth is your ability to move about discretely - to successfully stay quiet and avoid being noticed. </p>
                             </div>
+                            <br>
                             <div class="text">
-                                <label for= "generalknowledge"> General Knowledge </label>
-                                <input  data-toggle="tooltip" title=""type= "text" name = "generalknowledge" placeholder = "Enter Points"/>
+                                <label for= "generalknowledge"> General Knowledge:   &nbsp   </label>
+                                <input type= "text" name = "generalknowledge" placeholder = "Enter Points"/>
                                 <p>Your knowledge of things that don’t fall into the other skills. Who's the king of
                                 this land? What’s the historical significance of the strange coin you just found?
                                 How do you cook a decent meal? Which mushrooms are safe to eat?</p>
+                            </div>
+
+                            <h1> Defenses </h1>
+                            <br>
+                            <div class="text">
+                                <label for= "endurance"> Endurance:   &nbsp   </label>
+                                <input type= "text" name = "endurance" placeholder = "Enter Points"/>
+                                <p>Enduring serious damage, wounds and diseases through sheer physical toughness</p>
+                            </div>
+                            <div class="text">
+                                <label for= "reflexes"> Reflexes:   &nbsp   </label>
+                                <input type= "text" name = "reflexes" placeholder = "Enter Points"/>
+                                <p>Quickly react to danger, dodging traps and responding to sucker-punches.</p>
+                            </div>
+                             <div class="text">
+                                 <label for= "will"> Will:   &nbsp   </label>
+                                 <input type= "text" name = "will" placeholder = "Enter Points"/>
+                                 <p>Mentally resisting mind-altering effects, or similar mental assaults (from resisting
+                                  body possession and charm spells to holding onto one's sanity in the face of
+                                  abominations).</p>
+                             </div>
+
+
+
 
                         </form>
                         <br>

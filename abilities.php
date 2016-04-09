@@ -125,15 +125,15 @@
                         <h3 class="text-warning panel-heading">Abilities</a></h3>
                         <br><br>
                         <form class="form-horizontal">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 1</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 2</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 3</label>
-                            </div>
+                            <p> Number of ability points:</p>
+                            <br>
+                            <label for="chooseability"> Choose your abilities: </label>
+                            <select required>
+                              <option class="placeholder" selected disabled value="">Select Ability</option>
+                              <option>RKO</option>
+                              <option>Tuna to the face!</option>
+                            </select>
+
                         </form>
                         <br>
 
