@@ -186,7 +186,7 @@
                             <h1> Defenses </h1>
                             <br>
                             <div class="text">
-                                <label for= "endurance"> Endurance:   &nbsp   </label>
+                                <la-bel for= "endurance"> Endurance:   &nbsp   </label>
                                 <input type= "text" name = "endurance" placeholder = "Enter Points"/>
                                 <p>Enduring serious damage, wounds and diseases through sheer physical toughness</p>
                             </div>
