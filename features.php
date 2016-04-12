@@ -125,15 +125,15 @@
                         <h3 class="text-warning panel-heading">Features</a></h3>
                         <br><br>
                         <form class="form-horizontal">
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 1</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 2</label>
-                            </div>
-                            <div class="checkbox">
-                                <label><input type="checkbox" value="">Option 3</label>
-                            </div>
+
+                              <br>
+                              <label for="chooseability"> Choose your Feature: </label>
+                                    <select required>
+                                        <option class="placeholder" selected disabled value="">Pick a Feature</option>
+                                        <option>Feature 1</option>
+                                        <option> Feature 2</option>
+                                    </select>
+
                         </form>
                         <br>
 
