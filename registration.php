@@ -126,7 +126,7 @@ if ($username&&$firstname&&$lastname&&$password&&$confirmpassword)
                         </li>
 
                     </ul>
-                    
+
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active">
                             <?php if (($_SESSION['username']) != $user) : ?>
@@ -146,8 +146,9 @@ if ($username&&$firstname&&$lastname&&$password&&$confirmpassword)
 
                         </li>
 
-                    </ul>
-                </div>
+                                        </ul>
+
+                                </div>
                     <!-- /.navbar-collapse -->
             </div>
                 <!-- /.container -->
