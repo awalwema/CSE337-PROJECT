@@ -4,12 +4,18 @@ session_start(); ?>
 <?php $user = $_COOKIE['username']; ?>
 <?php //error_reporting(0);?>
 <?php require 'dbconnect.php';
+
+$character_id = $_GET['id'];
 $username = $_SESSION['username'];
 
 $query_ID = mysql_query("SELECT USER_ID FROM USER WHERE USER_SCREENNAME = '$username'");
 $row = mysql_fetch_array($query_ID);
 $usr_id= $row['USER_ID'];
-$character_id = isset($_GET['id']);
+
+if ($character_id == 0){
+
+    ob_start();
+}
 ?>
 <html lang="en">
 
@@ -28,7 +34,7 @@ $character_id = isset($_GET['id']);
                         <br><br>
                             <form action= "bio.php?id=<?php echo $character_id ?>" method = "POST">
                                 <label>Name:</label>
-                                <textarea class="form-control" rows="1" name="name" id = "comments"><?php $query_INFO = mysql_query("SELECT CHARACTER_NAME, CHARACTER_BACKGROUND FROM character_main WHERE USER_ID = '$usr_id' AND CHARACTER_ID = '$character_id'"); $row = mysql_fetch_array($query_INFO);
+                                <textarea class="form-control" rows="1" name="name" id = "comments"><?php $query_INFO = mysql_query("SELECT CHARACTER_NAME, CHARACTER_BACKGROUND FROM character_main WHERE USER_ID = '$usr_id' AND CHARACTER_ID = '$character_id'");$row = mysql_fetch_array($query_INFO);
 $get_name = $row['CHARACTER_NAME']; echo $get_name;?></textarea>
                                 <label >Character Information:</label>
                                 <textarea class="form-control" rows="8" name="characterinfo" id = "comments"><?php $get_desc = $row['CHARACTER_BACKGROUND']; echo $get_desc;?></textarea>
@@ -40,20 +46,24 @@ $get_name = $row['CHARACTER_NAME']; echo $get_name;?></textarea>
                                     $query_row = mysql_query("SELECT * FROM character_main WHERE USER_ID = '$usr_id' AND CHARACTER_ID = '$character_id'");
                                     $num =mysql_num_rows($query_row);
 
-                                if (1 == $num){
+                                if ((1 == $num) and ($character_id !=0)){
                                         mysql_query("UPDATE character_main
                                                     SET CHARACTER_NAME = '$name', CHARACTER_BACKGROUND = '$c_info'
                                                     WHERE USER_ID = '$usr_id' AND CHARACTER_ID= '$character_id'");
                                         echo "Changes have been saved";
+                                        header('Location:bio.php?id=' . $character_id . '');
+                                exit;
                                 }
 
                                 else{
                                     $queryins = mysql_query("INSERT INTO character_main(CHARACTER_ID, USER_ID, CHARACTER_NAME, CHARACTER_BACKGROUND) VALUES (' ', '$usr_id','$name', '$c_info') ");
                                     echo "Changes have been saved";
-                                    }
-                                header('Location:bio.php?id=' . $character_id . '');
-                                exit;
 
+                                    header('Location:bio.php?id=' . $character_id . '');
+                                    exit;
+                                    }
+
+                                
                                 }
 
                                     ?>
@@ -119,6 +129,8 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
+
 ?>
 
                         </form>

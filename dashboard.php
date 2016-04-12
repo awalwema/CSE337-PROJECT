@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <?php session_start();?>
 <?php $user = $_COOKIE['username']; ?>
-<?php error_reporting(0); ?>
+<?php require 'dbconnect.php'; 
+$username = $_SESSION['username'];
+                                
+$query_ID = mysql_query("SELECT USER_ID FROM USER WHERE USER_SCREENNAME = '$username'");
+$row = mysql_fetch_array($query_ID);
+$usr_id= $row['USER_ID'];
+?>
 
 <html lang="en">
 
@@ -124,9 +130,55 @@
 
                         <div class="panel panel-info">
 
-                        <h2 class="text-info panel-heading">Your Characters</h2>
+                        <h1 class="text-info panel-heading">Your Characters</h1>
                         <p class="section-paragraph panel-body">
-                            Links to specific character sheets
+                            <?php
+                                $result = mysql_query("SELECT CHARACTER_NAME, CHARACTER_ID, CHARACTER_LEVEL FROM character_main WHERE USER_ID = '$usr_id'");
+
+                                if(mysql_num_rows($result) == 0) {
+                            echo '<div class = "alert alert-warning" role ="alert">You have no characters. <a href="bio.php?id=0">Click here to create one.</a></div>';
+                            
+                            } else {
+
+
+                                        echo '<table class="table table-hover">';
+                                            echo '<thead>';
+                                                echo "<tr>";
+                                                    echo "<th>#</th>";
+                                                    echo "<th>Name</th>";
+                                                    echo "<th>Level</th>";
+                                                    
+                                                    
+                                                echo "<tr>";
+                                            echo "</thead>";
+
+                                        $counter = 1;   
+
+                                        echo "<tbody>"; 
+
+                                        while($row = mysql_fetch_assoc($result)) {
+                                            
+                                                echo "<tr>";
+                                                    echo "<td>" . $counter . "</td>";
+                                                    echo "<td>". '<a href="charactersheet.php?id='.$row["CHARACTER_ID"].'">' . $row["CHARACTER_NAME"]. '</a>'. "</td>";
+                                                    echo "<td>". $row["CHARACTER_LEVEL"]. "</td>";
+                                                echo "<tr>";
+                                            
+
+                                            $counter = $counter + 1;
+                                        }
+
+                                                    echo "</tbody>";
+
+                                        echo "</table>";
+
+
+
+
+                            }
+
+
+                            ?>
                         </p>
 
                         </div>

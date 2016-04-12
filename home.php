@@ -16,6 +16,8 @@
                                 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
+    echo '<h1 class="section-heading text-danger">Welcome to Character Creator!</h1>';
+
 } else {
     echo '<h1 class="section-heading text-danger">Welcome to Character Creator!</h1>';
 }
