@@ -128,11 +128,22 @@
 
                               <br>
                               <label for="chooseability"> Choose your Feature: </label>
-                                    <select required>
-                                        <option class="placeholder" selected disabled value="">Pick a Feature</option>
-                                        <option>Feature 1</option>
-                                        <option> Feature 2</option>
-                                    </select>
+                            <?php require 'dbconnect.php';
+                            $username = $_SESSION['username'];
+                            $query = mysql_query("SELECT FEATURES_ID, FEATURES_NAME FROM FEATURES");
+
+                            // Open the drop down box
+                            echo '<select name="Select Feature">';
+
+                            echo '<option class="placeholder" selected disabled value="">Select Feature</option>';
+
+                            // Loop through the query results, outputting the options one by one
+                            while ($row = mysql_fetch_array($query)) {
+                                echo '<option value="'.$row['FEATURES_ID'].'">'.$row['FEATURES_NAME'].'</option>';
+                            }
+
+                            // Close the drop down box
+                            echo '</select>';?>
 
                         </form>
                         <br>

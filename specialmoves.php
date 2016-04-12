@@ -128,13 +128,24 @@
                            <form class="form-horizontal">
                                  <br>
                                  <label for="chooseability"> Pick Your Special Move: </label>
-                                 <select required>
-                                    <option class="placeholder" selected disabled value="">Select Ability</option>
-                                    <option>Mega RKO</option>
-                                    <option>Makrel Smash!</option>
-                                 </select>
+                                     <?php require 'dbconnect.php';
+                                     $username = $_SESSION['username'];
+                                     $query = mysql_query("SELECT SPECIAL_MOVES_ID, SPECIAL_MOVES_NAME FROM SPECIAL_MOVES");
 
-                                                   </form>
+                                     // Open your drop down box
+                                     echo '<select name="Select Special Move">';
+
+                                     echo '<option class="placeholder" selected disabled value="">Select Special Move</option>';
+
+                                         // Loop through the query results, outputting the options one by one
+                                         while ($row = mysql_fetch_array($query)) {
+                                         echo '<option value="'.$row['SPECIAL_MOVES_ID'].'">'.$row['SPECIAL_MOVES_NAME'].'</option>';
+                                         }
+
+                                         // Close the drop down box
+                                         echo '</select>';?>
+
+                           </form>
                         </form>
                         <br>
 

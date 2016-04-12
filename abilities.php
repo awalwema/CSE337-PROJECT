@@ -128,11 +128,22 @@
                             <p> Number of ability points:</p>
                             <br>
                             <label for="chooseability"> Choose your abilities: </label>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Select Ability</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
+                            <?php require 'dbconnect.php';
+                            $username = $_SESSION['username'];
+                            $query = mysql_query("SELECT ABILITIES_ID, ABILITIES_NAME FROM ABILITIES");
+
+                            // Open the drop down box
+                            echo '<select name="Select Ability">';
+
+                            echo '<option class="placeholder" selected disabled value="">Select Ability</option>';
+
+                            // Loop through the query results, outputting the options one by one
+                            while ($row = mysql_fetch_array($query)) {
+                                echo '<option value="'.$row['ABILITIES_ID'].'">'.$row['ABILITIES_NAME'].'</option>';
+                            }
+
+                            // Close the drop down box
+                            echo '</select>';?>
 
                         </form>
                         <br>

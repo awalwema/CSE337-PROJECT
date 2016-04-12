@@ -127,42 +127,129 @@
                          <form class="form-horizontal">
                             <h3> Choose 7 Combat Powers </h3>
                             <br>
-                            <label for="chooseability"> Combat Power 1: </label>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Combat Power</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Select Ability</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Select Ability</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Select Ability</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Select Ability</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Select Ability</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
-                            <select required>
-                              <option class="placeholder" selected disabled value="">Select Ability</option>
-                              <option>RKO</option>
-                              <option>Tuna to the face!</option>
-                            </select>
+                            <label for="choosepower1"> Combat Power 1: </label>
+                             <?php require 'dbconnect.php';
+                             $username = $_SESSION['username'];
+                             $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
+
+                             // Open the drop down box
+                             echo '<select name="Select Power">';
+
+                             echo '<option class="placeholder" selected disabled value="">Select Power</option>';
+                             // Loop through the query results, outputting the options one by one
+                             while ($row = mysql_fetch_array($query)) {
+                                 echo '<option value="'.$row['POWERS_ID'].'">'.$row['POWERS_NAME'].'</option>';
+                             }
+                             // Close the drop down box
+                             echo '</select>';?>
+                             <br>
+
+                             <label for="choosepower2"> Combat Power 2: </label>
+                             <?php require 'dbconnect.php';
+                             $username = $_SESSION['username'];
+                             $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
+
+                             // Open the drop down box
+                             echo '<select name="Select Power">';
+
+                             echo '<option class="placeholder" selected disabled value="">Select Power</option>';
+
+                             // Loop through the query results, outputting the options one by one
+                             while ($row = mysql_fetch_array($query)) {
+                                 echo '<option value="'.$row['POWERS_ID'].'">'.$row['POWERS_NAME'].'</option>';
+                             }
+                             // Close the drop down box
+                             echo '</select>';?>
+                             <br>
+
+                             <label for="choosepower3"> Combat Power 3: </label>
+                             <?php require 'dbconnect.php';
+                             $username = $_SESSION['username'];
+                             $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
+
+                             // Open the drop down box
+                             echo '<select name="Select Power">';
+
+                             echo '<option class="placeholder" selected disabled value="">Select Power</option>';
+
+                             // Loop through the query results, outputting the options one by one
+                             while ($row = mysql_fetch_array($query)) {
+                                 echo '<option value="'.$row['POWERS_ID'].'">'.$row['POWERS_NAME'].'</option>';
+                             }
+                             // Close the drop down box
+                             echo '</select>';?>
+                             <br>
+
+                             <label for="choosepower4"> Combat Power 4: </label>
+                             <?php require 'dbconnect.php';
+                             $username = $_SESSION['username'];
+                             $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
+
+                             // Open the drop down box
+                             echo '<select name="Select Power">';
+
+                             echo '<option class="placeholder" selected disabled value="">Select Power</option>';
+
+                             // Loop through the query results, outputting the options one by one
+                             while ($row = mysql_fetch_array($query)) {
+                                 echo '<option value="'.$row['POWERS_ID'].'">'.$row['POWERS_NAME'].'</option>';
+                             }
+                             // Close the drop down box
+                             echo '</select>';?>
+                             <br>
+
+                             <label for="choosepower5"> Combat Power 5: </label>
+                             <?php require 'dbconnect.php';
+                             $username = $_SESSION['username'];
+                             $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
+
+                             // Open the drop down box
+                             echo '<select name="Select Power">';
+
+                             echo '<option class="placeholder" selected disabled value="">Select Power</option>';
+
+                             // Loop through the query results, outputting the options one by one
+                             while ($row = mysql_fetch_array($query)) {
+                                 echo '<option value="'.$row['POWERS_ID'].'">'.$row['POWERS_NAME'].'</option>';
+                             }
+                             // Close the drop down box
+                             echo '</select>';?>
+                             <br>
+
+                             <label for="choosepower6"> Combat Power 6: </label>
+                             <?php require 'dbconnect.php';
+                             $username = $_SESSION['username'];
+                             $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
+
+                             // Open the drop down box
+                             echo '<select name="Select Power">';
+
+                             echo '<option class="placeholder" selected disabled value="">Select Power</option>';
+
+                             // Loop through the query results, outputting the options one by one
+                             while ($row = mysql_fetch_array($query)) {
+                                 echo '<option value="'.$row['POWERS_ID'].'">'.$row['POWERS_NAME'].'</option>';
+                             }
+                             // Close the drop down box
+                             echo '</select>';?>
+                             <br>
+
+                             <label for="choosepower7"> Combat Power 7: </label>
+                             <?php require 'dbconnect.php';
+                             $username = $_SESSION['username'];
+                             $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
+
+                             // Open the drop down box
+                             echo '<select name="Select Power">';
+
+                             echo '<option class="placeholder" selected disabled value="">Select Power</option>';
+
+                             // Loop through the query results, outputting the options one by one
+                             while ($row = mysql_fetch_array($query)) {
+                                 echo '<option value="'.$row['POWERS_ID'].'">'.$row['POWERS_NAME'].'</option>';
+                             }
+                             // Close the drop down box
+                             echo '</select>';?>
                         </form>
 
                         <br>
