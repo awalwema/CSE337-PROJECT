@@ -10,6 +10,7 @@ if (isset($_POST['sign-in'])) {
 
     $username = strtolower(strip_tags($_POST[ 'username' ]));
     $password = strtolower(strip_tags($_POST[ 'password' ]));
+    echo($username);
     $_SESSION['Error'] = "You left one or more of the required fields.";
     if ($username&&$password) {
             
@@ -20,7 +21,7 @@ if (isset($_POST['sign-in'])) {
             $_SESSION['username']= $username; // Initializing Session
             $_SESSION['loggedin'] = true;
             header("location: home.php"); // Redirecting To Other Page
-            setcookie('username', $_POST['username'], time()+60*60*60*24*365);
+            setcookie('username', strtolower(strip_tags($_POST['username'])), time()+60*60*60*24*365);
         } else {
             $msg="Incorrect username and password!";
 
