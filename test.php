@@ -1,0 +1,1 @@
+?php $query_ID = mysql_query("SELECT USER_ID FROM USER WHERE USER_SCREENNAME = '$username'"); ?
