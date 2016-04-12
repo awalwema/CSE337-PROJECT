@@ -2,6 +2,7 @@
 <?php session_start(); ?>
 <?php $user = $_COOKIE['username']; ?>
 <?php error_reporting(0); ?>
+<?php require 'dbconnect.php'; ?>
 <html lang="en">
 
         <head>
@@ -128,7 +129,7 @@
 
                               <br>
                               <label for="chooseability"> Choose your Feature: </label>
-                            <?php require 'dbconnect.php';
+                            <?php
                             $username = $_SESSION['username'];
                             $query = mysql_query("SELECT FEATURES_ID, FEATURES_NAME FROM FEATURES");
 

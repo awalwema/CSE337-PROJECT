@@ -2,6 +2,7 @@
 <?php session_start(); ?>
 <?php $user = $_COOKIE['username']; ?>
 <?php error_reporting(0); ?>
+<?php require 'dbconnect.php'; ?>
 <html lang="en">
 
         <head>
@@ -128,7 +129,7 @@
                             <p> Number of ability points:</p>
                             <br>
                             <label for="chooseability"> Choose your abilities: </label>
-                            <?php require 'dbconnect.php';
+                            <?php
                             $username = $_SESSION['username'];
                             $query = mysql_query("SELECT ABILITIES_ID, ABILITIES_NAME FROM ABILITIES");
 

@@ -2,6 +2,7 @@
 <?php session_start(); ?>
 <?php $user = $_COOKIE['username']; ?>
 <?php error_reporting(0); ?>
+<?php require 'dbconnect.php'; ?>
 <html lang="en">
 
         <head>
@@ -128,7 +129,7 @@
                             <h3> Choose 7 Combat Powers </h3>
                             <br>
                             <label for="choosepower1"> Combat Power 1: </label>
-                             <?php require 'dbconnect.php';
+                             <?php
                              $username = $_SESSION['username'];
                              $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
 
@@ -145,7 +146,7 @@
                              <br>
 
                              <label for="choosepower2"> Combat Power 2: </label>
-                             <?php require 'dbconnect.php';
+                             <?php
                              $username = $_SESSION['username'];
                              $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
 
@@ -163,7 +164,7 @@
                              <br>
 
                              <label for="choosepower3"> Combat Power 3: </label>
-                             <?php require 'dbconnect.php';
+                             <?php
                              $username = $_SESSION['username'];
                              $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
 
@@ -181,7 +182,7 @@
                              <br>
 
                              <label for="choosepower4"> Combat Power 4: </label>
-                             <?php require 'dbconnect.php';
+                             <?php
                              $username = $_SESSION['username'];
                              $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
 
@@ -199,7 +200,7 @@
                              <br>
 
                              <label for="choosepower5"> Combat Power 5: </label>
-                             <?php require 'dbconnect.php';
+                             <?php
                              $username = $_SESSION['username'];
                              $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
 
@@ -217,7 +218,7 @@
                              <br>
 
                              <label for="choosepower6"> Combat Power 6: </label>
-                             <?php require 'dbconnect.php';
+                             <?php
                              $username = $_SESSION['username'];
                              $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
 
@@ -235,7 +236,7 @@
                              <br>
 
                              <label for="choosepower7"> Combat Power 7: </label>
-                             <?php require 'dbconnect.php';
+                             <?php
                              $username = $_SESSION['username'];
                              $query = mysql_query("SELECT POWERS_ID, POWERS_NAME FROM POWERS");
 

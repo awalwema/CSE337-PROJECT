@@ -2,6 +2,7 @@
 <?php session_start(); ?>
 <?php $user = $_COOKIE['username']; ?>
 <?php error_reporting(0); ?>
+<?php require 'dbconnect.php'; ?>
 <html lang="en">
 
         <head>
@@ -128,7 +129,7 @@
                            <form class="form-horizontal">
                                  <br>
                                  <label for="chooseability"> Pick Your Special Move: </label>
-                                     <?php require 'dbconnect.php';
+                                     <?php
                                      $username = $_SESSION['username'];
                                      $query = mysql_query("SELECT SPECIAL_MOVES_ID, SPECIAL_MOVES_NAME FROM SPECIAL_MOVES");
 
