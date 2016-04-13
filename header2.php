@@ -98,3 +98,6 @@
 
             <!-- Full Width Image Header with Logo -->
             <!-- Image backgrounds are set within the full-width-pics.css file. -->
+        <header>
+            <img class="img-responsive img-center" src="fantasy_city.jpg">
+        </header>

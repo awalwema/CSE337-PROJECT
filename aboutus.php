@@ -10,58 +10,82 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="section-heading text-danger">About Us</h1><br>
+                    <div class="panel panel-success col-lg-12">
+						<div class="panel-heading"><h1>About Us</h1></div>
+						<p class="lead section-lead">
+							<i>On a dark and stormy night, five brave students taking CSE/CIT 337 gathered to form this team...</i>
+						</p>
+						
+						<div class="panel panel-success col-lg-12">
+							<div class="panel-heading"><h4>Kyle Thornton</h4></div>
+							<div class="col-lg-2"><br>
+								<img src="kyle.png" width="100" height="100">
+							</div>
+							<div class="col-lg-10">
+								<p class="section-paragraph panel-body text-left">
+									Kyle is an Information Technology major.
+									He lends his mighty skills to the faraway kingdom of Birmingham.
+									He has a +5 bonus to all skill checks involving John Cena.
+								</p>
+							</div>
+						</div>
 
-                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-right" width="500" height="300">
+						<div class="panel panel-success col-lg-12">
+							<div class="panel-heading"><h4>Matthew Vasilakis</h4></div>
+							<div class="col-lg-2"><br>
+								<img src="matthew.png" width="100" height="100">
+							</div>
+							<div class="col-lg-10">
+								<p class="section-paragraph panel-body text-left">
+									Matthew is a Computer Science major.
+									What he does in his spare time is a mystery to many.
+									What is known, however, is that he has the power to slay a dozen men in a heartbeat, but he usually doesn't because he's such a nice guy.
+								</p>
+							</div>
+						</div>
 
-                        <div class="panel panel-success">
+						<div class="panel panel-success col-lg-12">
+							<div class="panel-heading"><h4>Andrew Walwema</h4></div>
+							<div class="col-lg-2"><br>
+								<img src="andrew.png" width="100" height="100">
+							</div>
+							<div class="col-lg-10">
+								<p class="section-paragraph panel-body text-left">
+									Andrew is a Computer Science major.
+									He can be found providing sagely assistance to wayward technology users at the Kresge Library.
+									His chief weapons are fear, surprise, and a Linux operating system.
+								</p>
+							</div>
+						</div>
 
-                        <h3 class="text-success panel-heading">Our Team</h3>
-                        <p class="section-paragraph panel-body">
-                        <br>
-                            We take great pride in providing you with the best experience on our site.  Browse through our team
-                            members below and gain some background information on them.  If you have any questions or concerns,
-                            please go to our <a href="contactus.php">Contact Us</a>
-                            page.
-                        </p>
+						<div class="panel panel-success col-lg-12">
+							<div class="panel-heading"><h4>Brianna Kearney</h4></div>
+							<div class="col-lg-2"><br>
+								<img src="brianna.png" width="100" height="100">
+							</div>
+							<div class="col-lg-10">
+								<p class="section-paragraph panel-body text-left">
+									Brianna is an Information Technology major.
+									In her spare time she does absolutely nothing of value.
+									It is rumored that she is actually a several-centuries-old sorceress.
+								</p>
+							</div>
+						</div>
 
-                        <h3 class="text-success panel-heading">Kyle Thornton:</h3>
-                        <p class="section-paragraph panel-body">
-                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-left" style="padding-right:20px;" width="100" height="100">
-                            Major -
-                            <br><br>
-                            Project Contribution -
-                        </p>
-                        <h3 class="text-success panel-heading">Matthew Vasilakis:</h3>
-                        <p class="section-paragraph panel-body">
-                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-left" style="padding-right:20px;" width="100" height="100">
-                            Major - Computer Science
-                            <br><br>
-                            Project Contribution -
-                        </p>
-                        <h3 class="text-success panel-heading">Andrew Walwema:</h3>
-                        <p class="section-paragraph panel-body">
-                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-left" style="padding-right:20px;" width="100" height="100">
-                            Major -
-                            <br><br>
-                            Project Contribution -
-                        </p>
-                        <h3 class="text-success panel-heading">Brianna Kearney:</h3>
-                        <p class="section-paragraph panel-body">
-                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-left" style="padding-right:20px;" width="100" height="100">
-                            Major -
-                            <br><br>
-                            Project Contribution -
-                        </p>
-                        <h3 class="text-success panel-heading">Brandon Jackson:</h3>
-                        <p class="section-paragraph panel-body">
-                        <img src="http://www.acornsoftware.net/images/Careers/team.jpg" class="pull-left" style="padding-right:20px;" width="100" height="100">
-                            Major -
-                            <br><br>
-                            Project Contribution -
-                        </p>
-                        </div>
+						<div class="panel panel-success col-lg-12">
+							<div class="panel-heading"><h4>Brandon Jackson</h4></div>
+							<div class="col-lg-2"><br>
+								<img src="brandon.png" width="100" height="100">
+							</div>
+							<div class="col-lg-10">
+								<p class="section-paragraph panel-body text-left">
+									Brandon is a Computer Science major.
+									He is accomplished in the mystical art of plasticraft.
+									Do not meddle in his affairs for he is subtle and quick to anger.
+								</p>
+							</div>
+						</div>
+
                     </div>
                 </div>
             </div>
@@ -75,19 +99,6 @@
 
             <!-- Content Section -->
             <!-- Content Section -->
-
-            <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; 2016</p>
-                    </div>
-                </div>
-                    <!-- /.row -->
-            </div>
-                <!-- /.container -->
-        </footer>
 
             <!-- jQuery -->
         <script src='@routes.Assets.versioned("public/javascripts/jquery.js")'></script>
