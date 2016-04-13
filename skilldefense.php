@@ -59,7 +59,7 @@ $will = $row2['CHARACTER_WILL'];
             for(var j=0;j<arr.length;j++) {
 
                 if(!isNaN(arr[j]) ) {
-                    if(parseInt(arr[j]) < 10 && parseInt(arr[j]) >= 0) {
+                    if(parseInt(arr[j]) <= 10 && parseInt(arr[j]) >= 0) {
                         findTotal();
                     }
                     else {
@@ -89,15 +89,6 @@ $will = $row2['CHARACTER_WILL'];
                             <?php
                             if(isset($_POST["submit"])) {
 
-                                $totalUsed = $acrobatics + $arcana + $dexterity + $heal + $insight + $might + $perception +
-                                    $stealth + $genKnowledge + $endurance + $reflexes + $will;
-                                $totalUnused = $skillPoints - $totalUsed;
-                                if($totalUsed > $skillPoints) {
-                                    echo "Too many skill points allotted.";
-
-                                }
-                                else {
-
                                     $acrobatics = $_POST['acrobatics'];
                                     $arcana = $_POST['arcana'];
                                     $dexterity = $_POST['dexterity'];
@@ -111,6 +102,18 @@ $will = $row2['CHARACTER_WILL'];
                                     $reflexes = $_POST['reflexes'];
                                     $will = $_POST['will'];
 
+                                $totalUsed = $acrobatics + $arcana + $dexterity + $heal + $insight + $might + $perception +
+                                    $stealth + $genKnowledge + $endurance + $reflexes + $will;
+                                $totalUnused = $skillPoints - $totalUsed;
+                                
+                                if($totalUsed > $skillPoints) {
+                                    echo "Too many skill points allotted.";
+
+                                }
+                                else {
+
+                                    
+
                                     mysql_query("UPDATE character_main
                                                 SET CHARACTER_ACROBATICS = '$acrobatics', CHARACTER_ARCANA = '$arcana',
                                                 CHARACTER_DEXTERITY = '$dexterity', CHARACTER_HEAL = '$heal', CHARACTER_INSIGHT = '$insight',
@@ -120,7 +123,8 @@ $will = $row2['CHARACTER_WILL'];
                                                 WHERE CHARACTER_ID = '$character_id'");
 
                                     echo "Changes saved.";
-                                    //echo $acrobatics, $arcana, $dexterity, $heal, $insight, $might, $perception, $stealth, $genKnowledge, $endurance, $reflexes, $will, $character_id;
+                                    echo "Tot Unused: " . $totalUnused . "Tot Used:" . $totalUsed . "<br>";
+                                    echo $acrobatics, $arcana, $dexterity, $heal, $insight, $might, $perception, $stealth, $genKnowledge, $endurance, $reflexes, $will, $character_id;
                                 }
 
                             }
@@ -232,9 +236,12 @@ $will = $row2['CHARACTER_WILL'];
                             <input type="Submit" value="Save" name="submit" class="btn btn-primary">
                             </div>
 
+
                         </form>
                         <br>
-
+                            <div>
+                                    <button type="button" class="btn btn-warning pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
+                            </div>
 
                         </div>
                     </div>
