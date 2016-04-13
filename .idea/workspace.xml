@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91286c69-3168-4ce2-88f6-7c63ddf30743" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bio.php" afterPath="$PROJECT_DIR$/bio.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/skilldefense.php" afterPath="$PROJECT_DIR$/skilldefense.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abilities.php" afterPath="$PROJECT_DIR$/abilities.php" />
     </list>
     <ignored path="Class-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,26 +57,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="abilities.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="abilities.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/abilities.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.42212188">
+              <caret line="32" column="104" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
               <folding>
-                <marker date="1460497449062" expanded="true" signature="1024:1074" placeholder="SELECT ABILI... ABILITIES" />
-                <marker date="1460497449062" expanded="true" signature="2297:2623" placeholder="..." />
-                <marker date="1460497449062" expanded="true" signature="2333:2568" placeholder="..." />
-                <marker date="1460497449062" expanded="true" signature="2367:2514" placeholder="..." />
-                <marker date="1460497449062" expanded="true" signature="2411:2491" placeholder="..." />
+                <marker date="1460514529933" expanded="true" signature="920:985" placeholder="SELECT ABILI... ABILITIES" />
+                <marker date="1460514529933" expanded="true" signature="2077:2315" placeholder="..." />
+                <marker date="1460514529933" expanded="true" signature="2105:2280" placeholder="..." />
+                <marker date="1460514529933" expanded="true" signature="2131:2246" placeholder="..." />
+                <marker date="1460514529933" expanded="true" signature="2167:2231" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="skilldefense.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="skilldefense.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skilldefense.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3837472">
+            <state vertical-scroll-proportion="-45.76923">
               <caret line="106" column="71" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="71" />
               <folding>
                 <marker date="1460513888909" expanded="true" signature="202:262" placeholder="SELECT USER_... USER" />
@@ -152,11 +151,11 @@
         <option value="$PROJECT_DIR$/charactersheet.php" />
         <option value="$PROJECT_DIR$/combatpowers.php" />
         <option value="$PROJECT_DIR$/features.php" />
-        <option value="$PROJECT_DIR$/abilities.php" />
         <option value="$PROJECT_DIR$/specialmoves.php" />
         <option value="$PROJECT_DIR$/home.php" />
         <option value="$PROJECT_DIR$/bio.php" />
         <option value="$PROJECT_DIR$/skilldefense.php" />
+        <option value="$PROJECT_DIR$/abilities.php" />
       </list>
     </option>
   </component>
@@ -721,7 +720,7 @@
       <option name="number" value="Default" />
       <updated>1459391075131</updated>
       <workItem from="1459391077072" duration="36207000" />
-      <workItem from="1460478991173" duration="34730000" />
+      <workItem from="1460478991173" duration="35289000" />
     </task>
     <task id="LOCAL-00001" summary="Moved &quot;logged in as: username&quot; to navbar(on home page)">
       <created>1459826965208</created>
@@ -771,11 +770,17 @@
       <option name="project" value="LOCAL" />
       <updated>1460499758777</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Complete functionality of Skills and Defense Page">
+      <created>1460514079113</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1460514079113</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70937000" />
+    <option name="totallyTimeSpent" value="71496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -825,7 +830,8 @@
     <MESSAGE value="Merge branches 'BrandonChanges' and 'mattbranch' of https://github.com/awalwema/CSE337-PROJECT into BrandonChanges&#10;&#10;# Conflicts:&#10;#&#9;abilities.php&#10;#&#9;aboutus.php&#10;#&#9;bio.php&#10;#&#9;charactersheet.php&#10;#&#9;combatpowers.php&#10;#&#9;contactus.php&#10;#&#9;features.php&#10;#&#9;home.php&#10;#&#9;skilldefense.php&#10;#&#9;specialmoves.php&#10;" />
     <MESSAGE value="Merge branches 'BrandonChanges' and 'kylebranch' of https://github.com/awalwema/CSE337-PROJECT into BrandonChanges&#10;&#10;# Conflicts:&#10;#&#9;aboutus.php&#10;#&#9;contactus.php&#10;#&#9;home.php&#10;#&#9;login.php&#10;#&#9;registration.php&#10;" />
     <MESSAGE value="Merge branches 'BrandonChanges' and 'master' of https://github.com/awalwema/CSE337-PROJECT into BrandonChanges&#10;&#10;# Conflicts:&#10;#&#9;bio.php&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branches 'BrandonChanges' and 'master' of https://github.com/awalwema/CSE337-PROJECT into BrandonChanges&#10;&#10;# Conflicts:&#10;#&#9;bio.php&#10;" />
+    <MESSAGE value="Complete functionality of Skills and Defense Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete functionality of Skills and Defense Page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -869,11 +875,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="5" selection-start-line="117" selection-start-column="5" selection-end-line="117" selection-end-column="5" />
           <folding>
-            <marker date="1460497449062" expanded="true" signature="1024:1074" placeholder="SELECT ABILI... ABILITIES" />
-            <marker date="1460497449062" expanded="true" signature="2297:2623" placeholder="..." />
-            <marker date="1460497449062" expanded="true" signature="2333:2568" placeholder="..." />
-            <marker date="1460497449062" expanded="true" signature="2367:2514" placeholder="..." />
-            <marker date="1460497449062" expanded="true" signature="2411:2491" placeholder="..." />
+            <marker date="1460514529933" expanded="true" signature="920:985" placeholder="SELECT ABILI... ABILITIES" />
+            <marker date="1460514529933" expanded="true" signature="2077:2315" placeholder="..." />
+            <marker date="1460514529933" expanded="true" signature="2105:2280" placeholder="..." />
+            <marker date="1460514529933" expanded="true" signature="2131:2246" placeholder="..." />
+            <marker date="1460514529933" expanded="true" signature="2167:2231" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1118,20 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/abilities.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="38" />
-          <folding>
-            <marker date="1460497449062" expanded="true" signature="1024:1074" placeholder="SELECT ABILI... ABILITIES" />
-            <marker date="1460497449062" expanded="true" signature="2297:2623" placeholder="..." />
-            <marker date="1460497449062" expanded="true" signature="2333:2568" placeholder="..." />
-            <marker date="1460497449062" expanded="true" signature="2367:2514" placeholder="..." />
-            <marker date="1460497449062" expanded="true" signature="2411:2491" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.6923075">
@@ -1156,7 +1148,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skilldefense.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3837472">
+        <state vertical-scroll-proportion="-45.76923">
           <caret line="106" column="71" selection-start-line="106" selection-start-column="71" selection-end-line="106" selection-end-column="71" />
           <folding>
             <marker date="1460513888909" expanded="true" signature="202:262" placeholder="SELECT USER_... USER" />
@@ -1183,6 +1175,20 @@
             <marker date="1460513888909" expanded="true" signature="14387:14622" placeholder="..." />
             <marker date="1460513888909" expanded="true" signature="14421:14568" placeholder="..." />
             <marker date="1460513888909" expanded="true" signature="14465:14545" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abilities.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42212188">
+          <caret line="32" column="104" selection-start-line="32" selection-start-column="104" selection-end-line="32" selection-end-column="104" />
+          <folding>
+            <marker date="1460514529933" expanded="true" signature="920:985" placeholder="SELECT ABILI... ABILITIES" />
+            <marker date="1460514529933" expanded="true" signature="2077:2315" placeholder="..." />
+            <marker date="1460514529933" expanded="true" signature="2105:2280" placeholder="..." />
+            <marker date="1460514529933" expanded="true" signature="2131:2246" placeholder="..." />
+            <marker date="1460514529933" expanded="true" signature="2167:2231" placeholder="..." />
           </folding>
         </state>
       </provider>
