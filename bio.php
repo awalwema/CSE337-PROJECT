@@ -73,7 +73,7 @@ $get_name = $row['CHARACTER_NAME']; echo $get_name;?></textarea>
                                 }
 
                                     ?>
-                                <td><input type="Submit" value="Save" name="submit"></td>
+                                <td><input type="Submit" value="Save" name="submit" class="btn btn-primary"></td>
                             </form>
 
                         </div>
