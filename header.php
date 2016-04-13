@@ -26,6 +26,7 @@
     <body>
 
             <!-- Navigation -->
+                    <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -38,59 +39,55 @@
                     </button>
 
                 </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <?php if (($_SESSION['username']) != $user) : ?>
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                        <ul class="nav navbar-nav">
+                                         <li>
+                                            <a href="home.php">Home</a>
+                                         </li>
+                                         <li>
+                                            <a href="contactus.php">Contact Us</a>
+                                         </li>
+                                         <li>
+                                            <a href="aboutus.php">About Us</a>
+                                         </li>
 
-                        <li>
-                            <a href="home.php">Home</a>
-                        </li>
-                        <li>
-                            <a href="contactus.php">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="aboutus.php">About Us</a>
-                        </li>
 
-                        <?php else : ?>
+                                         <?php if (($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+ 
+                                          echo '<li>
+                                            <a href="dashboard.php">Dashboard</a>
+                                         </li>';
+                                     }
 
-                                <li>
-                                    <a href="home.php">Home</a>
-                                </li>
-                                <li>
-                                    <a href="contactus.php">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a href="aboutus.php">About Us</a>
-                                </li>
-                                <li>
-                                    <a href="charactersheet.php">Character Sheet</a>
-                                </li>
+                                         ?>
 
-                        <?php endif; ?>
+                                        </ul>
+                                        <ul class="nav navbar-nav navbar-right ">
+                                          <?php if (($_SESSION['username']) != $user) : ?>
+                                         <li class="active">
 
-                        </li>
 
-                    </ul>
-                    
-                    <ul class="nav navbar-nav navbar-right navbar-text">
-                        <li class="active">
-                            <?php if (($_SESSION['username']) != $user) : ?>
+                                                 <a href="login.php">Login &nbsp;</a>
+                                         </li>
+                                         <li class="active">
 
-                                <li><a href="login.php"> Log In</a></li>
-                                <li><a href="registration.php"> Register</a></li>
 
-                            <?php else : ?>
-                                <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
-                                <a href="logout.php"> Logout </a>
-                            <?php endif; ?>
+                                                 <a href="register.php">  Register</a>
+                                         </li>
+                                         <?php else : ?>
+                                         <li class="nav navbar-text">
+                                                 <p>Logged in as: <?php echo $_SESSION['username'] ?>   </p>
 
-                        </li>
+                                         </li>
+                                         <li>
+                                         <a href="logout.php"> Logout </a>
+                                         </li>
+                                          <?php endif; ?>
 
-                    </ul>
-                </div>
+                                        </ul>
+
+                                </div>
                     <!-- /.navbar-collapse -->
             </div>
                 <!-- /.container -->

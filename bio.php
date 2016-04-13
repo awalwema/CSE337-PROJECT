@@ -56,8 +56,14 @@ $get_name = $row['CHARACTER_NAME']; echo $get_name;?></textarea>
                                 }
 
                                 else{
-                                    $queryins = mysql_query("INSERT INTO character_main(CHARACTER_ID, USER_ID, CHARACTER_NAME, CHARACTER_BACKGROUND) VALUES (' ', '$usr_id','$name', '$c_info') ");
+                                    $query_ins = mysql_query("INSERT INTO character_main(USER_ID, CHARACTER_NAME, CHARACTER_BACKGROUND) VALUES ('$usr_id','$name', '$c_info')");
                                     echo "Changes have been saved";
+
+                                    $query_NID = mysql_query("SELECT LAST_INSERT_ID()");
+
+                                    $row = mysql_fetch_array($query_NID);
+                                    $character_id= $row['LAST_INSERT_ID()'];
+
 
                                     header('Location:bio.php?id=' . $character_id . '');
                                     exit;
@@ -70,73 +76,8 @@ $get_name = $row['CHARACTER_NAME']; echo $get_name;?></textarea>
                                 <td><input type="Submit" value="Save" name="submit"></td>
                             </form>
 
-                        <form action="bio.php" method="post" enctype="multipart/form-data">
-                            Select your character's image to upload:
-                            <input type="file" name="fileToUpload" id="fileToUpload">
-                            <input type="submit" value="Upload Image" name="submit-pic">
-
-
-<?php
-
-$username = $_SESSION['username'];
-$oldmask = umask(0);
-// Create directory if it does not exist
-if(!is_dir("uploads/". $username ."/".$character_id . "/")) {
-    mkdir("uploads/". $username ."/". $character_id . "/");
-}
-umask($oldmask);
-
-$target_dir = "uploads/" . $username . "/".$character_id . "/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-$uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit-pic"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
-        //echo "File is an image - " . $check["mime"] . ".";
-        $uploadOk = 1;
-    } else {
-        echo "File is not an image.";
-        $uploadOk = 0;
-    }
-}
-// Check if file already exists
-if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
-    $uploadOk = 0;
-}
-// Check file size
-if ($_FILES["fileToUpload"]["size"] > 1000000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-    $uploadOk = 0;
-}
-// Check if $uploadOk is set to 0 by an error
-if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
-// if everything is ok, try to upload file
-} else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
-         header('Location:bio.php?id=' . $character_id . '');
-    } else {
-        echo "Sorry, there was an error uploading your file.";
-    }
-}
-
-
-?>
-
-                        </form>
-
                         </div>
-                        <button type="button" class="btn btn-warning pull-right"><a href="charactersheet.php">Back to Character Sheet</a></button>
+                        <button type="button" class="btn btn-warning pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
 
                     </div>
                 </div>
