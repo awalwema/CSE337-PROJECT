@@ -35,15 +35,15 @@ $character_id = $_GET['id'];
 <?php
 
 $username = $_SESSION['username'];
-$oldmask = umask(0);
+//$oldmask = umask(0);
 // Create directory if it does not exist
 if(!is_dir("uploads/". $username ."/".$character_id . "/")) {
     mkdir("uploads/". $username ."/". $character_id . "/");
 }
-umask($oldmask);
+//umask($oldmask);
 
-//$target_dir = "uploads/" . $username . "/".$character_id . "/";
-$target_file = "uploads/" . $username . "/".$character_id . "/" . basename($_FILES["fileToUpload"]["name"]);
+$target_dir = "uploads/" . $username . "/".$character_id . "/";
+$target_file = $target_dir. basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
