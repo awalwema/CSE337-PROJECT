@@ -39,7 +39,7 @@ $username = $_SESSION['username'];
                             $target_dir = "uploads/" . $username . "/".$character_id . "/";
                             
                             $get_pic = $row['CHARACTER_PIC'];
-                            $target_file = "Class-Project/uploads/" . $username . "/".$character_id . "/" . $get_pic;
+                            $target_file = "CSE337-PROJECT/uploads/" . $username . "/".$character_id . "/" . $get_pic;
 
 
                             echo '

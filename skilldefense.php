@@ -122,9 +122,7 @@ $will = $row2['CHARACTER_WILL'];
                                                 CHARACTER_REFLEXES = '$reflexes', CHARACTER_WILL = '$will', CHARACTER_UNUSED_SKILL_POINTS = '$totalUnused'
                                                 WHERE CHARACTER_ID = '$character_id'");
 
-                                    echo "Changes saved.";
-                                    echo "Tot Unused: " . $totalUnused . "Tot Used:" . $totalUsed . "<br>";
-                                    echo $acrobatics, $arcana, $dexterity, $heal, $insight, $might, $perception, $stealth, $genKnowledge, $endurance, $reflexes, $will, $character_id;
+                                    echo '<div class="alert alert-success" role ="alert">Changes Saved.</div>';
                                 }
 
                             }
