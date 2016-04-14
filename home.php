@@ -4,7 +4,7 @@
 <?php error_reporting(0); ?>
 <html lang="en">
 
-    <?php include 'header.php'; ?>
+    <?php include 'header2.php'; ?>
 
             <!-- Content Section -->
         <section>
@@ -12,7 +12,7 @@
                 <div class="row">
 					<div class="col-lg-2"></div>
                     <div class="col-lg-8 panel panel-success">
-						<div class="panel-heading"><h1>Welcome to the Castle Cumulus!</h1></div>
+						<div class="panel-heading"><h1>Welcome to Castle Cumulus!</h1></div>
                         <p class="lead section-lead">This website allows you to easily create character sheets for use with the Wanderlust roleplaying system.</p>
                         <p class="section-paragraph">To get started, <a href="login.php">log into</a> your account (or <a href="registration.php">register</a> for a free account if you don't have one). 
 						<br> Once you are logged in, you can start building your own <a href="charactersheet.php">Character Sheet</a>!

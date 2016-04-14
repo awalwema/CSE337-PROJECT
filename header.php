@@ -23,7 +23,7 @@
     </head>
 
 
-    <body>
+    <body class="image-bg-fixed-height">
 
             <!-- Navigation -->
                     <!-- Navigation -->
@@ -95,6 +95,3 @@
 
             <!-- Full Width Image Header with Logo -->
             <!-- Image backgrounds are set within the full-width-pics.css file. -->
-        <header class="image-bg-fluid-height">
-            <img class="img-rounded img-responsive img-center" src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/5459b646539419.5607d7390e203.png" width="200" height="200">
-        </header>
