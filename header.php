@@ -23,7 +23,7 @@
     </head>
 
 
-    <body class="image-bg-fixed-height">
+    <body class="image-bg-fluid-height">
 
             <!-- Navigation -->
                     <!-- Navigation -->
@@ -59,7 +59,6 @@
                                             <a href="dashboard.php">Dashboard</a>
                                          </li>';
                                      }
-
                                          ?>
 
                                         </ul>

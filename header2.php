@@ -73,7 +73,7 @@
                                          <li class="active">
 
 
-                                                 <a href="register.php">  Register</a>
+                                                 <a href="registration.php">  Register</a>
                                          </li>
                                          <?php else : ?>
                                          <li class="nav navbar-text">

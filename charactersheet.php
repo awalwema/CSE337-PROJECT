@@ -134,29 +134,29 @@ if ($uploadOk == 0) {
                         <p class="section-paragraph panel-body">
                             <?php 
                              $get_desc = $row['CHARACTER_BACKGROUND']; 
-                             echo $get_desc;
+                             //echo $get_desc;
                              ?>
                         </p>
 
                         <h3 class="text-info panel-heading"><a href="skilldefense.php?id=<?php echo $character_id ?>">Skills & Defenses</a></h3>
                         <p class="section-paragraph panel-body">
-                            text here returned from database
+                            
                         </p>
                         <h3 class="text-info panel-heading"><a href="abilities.php?id=<?php echo $character_id ?>">Abilities</a></h3>
                         <p class="section-paragraph panel-body">
-                            text here returned from database
+                            
                         </p>
                         <h3 class="text-info panel-heading"><a href="combatpowers.php?id=<?php echo $character_id ?>">Combat Powers</a></h3>
                         <p class="section-paragraph panel-body">
-                            text here returned from database
+                            
                         </p>
                         <h3 class="text-info panel-heading"><a href="features.php?id=<?php echo $character_id ?>">Features</a></h3>
                         <p class="section-paragraph panel-body">
-                            text here returned from database
+                            
                         </p>
                         <h3 class="text-info panel-heading"><a href="specialmoves.php?id=<?php echo $character_id ?>">Special Moves</a></h3>
                         <p class="section-paragraph panel-body">
-                            text here returned from database
+                            
                         </p>
                         </div>
                     </div>
