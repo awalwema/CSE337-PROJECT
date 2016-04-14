@@ -11,15 +11,15 @@
             <div class="container">
                 <div class="row">
                     <div class="panel panel-success col-lg-12">
-						<div class="panel-heading"><h1>About Us</h1></div>
-						<p class="lead section-lead">
+						<div class="panel-heading text-center"><h2>About Us</h2></div>
+						<p class="lead section-lead text-center">
 							<i>On a dark and stormy night, five brave students taking CSE/CIT 337 gathered to form this team...</i>
 						</p>
 						
 						<div class="panel panel-success col-lg-12">
-							<div class="panel-heading"><h4>Kyle Thornton</h4></div>
+							<div class="panel-heading text-center"><h4>Kyle Thornton</h4></div>
 							<div class="col-lg-2"><br>
-								<img src="kyle.png" width="100" height="100">
+								<img src="kyle.png" width="100" height="100" class="img-rounded center-block">
 							</div>
 							<div class="col-lg-10">
 								<p class="section-paragraph panel-body text-left">
@@ -31,9 +31,9 @@
 						</div>
 
 						<div class="panel panel-success col-lg-12">
-							<div class="panel-heading"><h4>Matthew Vasilakis</h4></div>
+							<div class="panel-heading text-center"><h4>Matthew Vasilakis</h4></div>
 							<div class="col-lg-2"><br>
-								<img src="matthew.png" width="100" height="100">
+								<img src="matthew.png" width="100" height="100" class="img-rounded center-block">
 							</div>
 							<div class="col-lg-10">
 								<p class="section-paragraph panel-body text-left">
@@ -45,9 +45,9 @@
 						</div>
 
 						<div class="panel panel-success col-lg-12">
-							<div class="panel-heading"><h4>Andrew Walwema</h4></div>
+							<div class="panel-heading text-center"><h4>Andrew Walwema</h4></div>
 							<div class="col-lg-2"><br>
-								<img src="andrew.png" width="100" height="100">
+								<img src="andrew.png" width="100" height="100" class="img-rounded center-block">
 							</div>
 							<div class="col-lg-10">
 								<p class="section-paragraph panel-body text-left">
@@ -59,9 +59,9 @@
 						</div>
 
 						<div class="panel panel-success col-lg-12">
-							<div class="panel-heading"><h4>Brianna Kearney</h4></div>
+							<div class="panel-heading text-center"><h4>Brianna Kearney</h4></div>
 							<div class="col-lg-2"><br>
-								<img src="brianna.png" width="100" height="100">
+								<img src="brianna.png" width="100" height="100" class="img-rounded center-block">
 							</div>
 							<div class="col-lg-10">
 								<p class="section-paragraph panel-body text-left">
@@ -73,9 +73,9 @@
 						</div>
 
 						<div class="panel panel-success col-lg-12">
-							<div class="panel-heading"><h4>Brandon Jackson</h4></div>
+							<div class="panel-heading text-center"><h4>Brandon Jackson</h4></div>
 							<div class="col-lg-2"><br>
-								<img src="brandon.png" width="100" height="100">
+								<img src="brandon.png" width="100" height="100" class="img-rounded center-block">
 							</div>
 							<div class="col-lg-10">
 								<p class="section-paragraph panel-body text-left">
