@@ -281,7 +281,9 @@ $unusedPoints = $row2['CHARACTER_UNUSED_ABILITY_POINTS'];
                     <br>
 
                 </div>
-
+                <div>
+                    <button type="button" class="btn btn-warning pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
+                </div>
             </div>
         </div>
     </div>

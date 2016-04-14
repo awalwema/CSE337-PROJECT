@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <?php session_start(); ?>
 <?php $user = $_COOKIE['username']; ?>
-<?php error_reporting(0); ?>
+<?php error_reporting(0);
+$character_id = $_GET['id']; ?>
 <?php require 'dbconnect.php'; ?>
 <html lang="en">
 
@@ -39,13 +40,19 @@
                             // Close the drop down box
                             echo '</select>';?>
 
+                            <div align="right">
+                             <input type="Submit" value="Save" name="submit" class="btn btn-primary">
+                         </div>
+
                         </form>
                         <br>
 
 
 
                         </div>
-                        <button type="button" class="btn btn-success pull-right"><a href="charactersheet.php">Save</a></button>
+                        <div>
+                                    <button type="button" class="btn btn-warning pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
+                            </div>
                     </div>
                 </div>
             </div>

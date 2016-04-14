@@ -18,9 +18,9 @@ $usr_id= $row['USER_ID'];
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="section-heading text-danger">Your Dasboard</h1><br>
+                        <h1 class="section-heading text-success">Your Dashboard</h1><br>
 
-                        <div class="panel panel-info">
+                        <div class="panel panel-success">
 
                         <h1 class="text-info panel-heading">Your Characters</h1>
                         <p class="section-paragraph panel-body">
@@ -28,7 +28,7 @@ $usr_id= $row['USER_ID'];
                                 $result = mysql_query("SELECT CHARACTER_NAME, CHARACTER_ID, CHARACTER_LEVEL FROM character_main WHERE USER_ID = '$usr_id'");
 
                                 if(mysql_num_rows($result) == 0) {
-                            echo '<div class = "alert alert-warning" role ="alert">You have no characters. <a href="bio.php?id=0">Click here to create one.</a></div>';
+                            echo '<div class = "alert alert-success" role ="alert">You have no characters. <a href="bio.php?id=0">Click here to create one.</a></div>';
                             
                             } else {
                                         echo '<button type="button" class = "btn btn-secondary btn-lg" ><a href="bio.php?id=0">Create a new character.</a></button>';
@@ -79,28 +79,6 @@ $usr_id= $row['USER_ID'];
                 </div>
             </div>
         </section>
-
-
-
-        <!-- Fixed Height Image Aside -->
-            <!-- Image backgrounds are set within the full-width-pics.css file. -->
-
-
-            <!-- Content Section -->
-            <!-- Content Section -->
-
-            <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; 2016</p>
-                    </div>
-                </div>
-                    <!-- /.row -->
-            </div>
-                <!-- /.container -->
-        </footer>
 
             <!-- jQuery -->
         <script src='@routes.Assets.versioned("public/javascripts/jquery.js")'></script>
