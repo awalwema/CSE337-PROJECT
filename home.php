@@ -12,12 +12,12 @@
                 <div class="row">
 					<div class="col-lg-2"></div>
                     <div class="col-lg-8 panel panel-success">
-						<div class="panel-heading"><h1>Welcome to Castle Cumulus!</h1></div>
-                        <p class="lead section-lead">This website allows you to easily create character sheets for use with the Wanderlust roleplaying system.</p>
-                        <p class="section-paragraph">To get started, <a href="login.php">log into</a> your account (or <a href="registration.php">register</a> for a free account if you don't have one). 
+						<div class="panel-heading text-center"><h1>Welcome to Castle Cumulus!</h1></div>
+                        <p class="lead section-lead text-center">This website allows you to easily create character sheets for use with the Wanderlust roleplaying system.</p>
+                        <p class="section-paragraph text-center">To get started, <a href="login.php">log into</a> your account (or <a href="registration.php">register</a> for a free account if you don't have one). 
 						<br> Once you are logged in, you can start building your own <a href="charactersheet.php">Character Sheet</a>!
                         </p>
-						<div class="panel-footer"><i>Graphic elements on this site used under fair-use law for educational purposes. Please don't sue us.</i></div>
+						<div class="panel-footer text-center"><i>Graphic elements on this site used under fair-use law for educational purposes. Please don't sue us.</i></div>
                     </div>
 					<div class="col-lg-2"></div>
                 </div>

@@ -56,50 +56,38 @@ if ($username&&$firstname&&$lastname&&$password&&$confirmpassword)
             <div class="row">
 				<div class="col-lg-3"></div>
                 <div class="panel panel-success col-lg-6">
-                    <div class="panel-heading"><h2>Register</h2></div>
+                    <div class="panel-heading text-center"><h2>Register</h2></div>
 					<br>
-                    <form role="form-horizontal" action = "registration.php" method='POST'>
+                    <form role="form" action = "registration.php" method='POST'>
 					<fieldset>
-						<p class="help-block">Please fill out all fields.</p><br>
-						<div class="row form-group">
-							<label for="firstname" class="col-sm-3 control-label text-right">First Name:</label>
-							<div class="col-sm-9">
+						<p class="help-block text-center">Please fill out all fields.</p>
+						<div class="form-group">
+							<label for="firstname">First Name:</label>
                             <input type="text" class="form-control" name = "firstname" id="firstname"/>
-							</div>
 						</div>
-						<div class="row form-group">
-							<label for="lastname" class="col-sm-3 control-label text-right">Last Name:</label>
-							<div class="col-sm-9">
+						<div class="form-group">
+							<label for="lastname">Last Name:</label>
                             <input type="text" class="form-control" name = "lastname" id="lastname"/>
-							</div>
 						</div>
-						<div class="row form-group">
-							<label for="username" class="col-sm-3 control-label text-right">User Name:</label>
-							<div class="col-sm-9">
+						<div class="form-group">
+							<label for="username">User Name:</label>
                             <input type="text" class="form-control" name = "username" id="username"/>
-							</div>
 						</div>
-						<div class="row form-group">
-							<label for="password" class="col-sm-3 control-label text-right">Password:</label>
-							<div class="col-sm-9">
+						<div class="form-group">
+							<label for="password">Password:</label>
                             <input type="password" class="form-control" name = "password" id="password"/>
-							</div>
 						</div>
-						<div class="row form-group">
-							<label for="confirmpw" class="col-sm-3 control-label text-right">Confirm Password:</label>
-							<div class="col-sm-9">
+						<div class="form-group">
+							<label for="confirmpw">Confirm Password:</label>
                             <input type="password" class="form-control" name = "confirmpassword" id="confirmpw"/>
-							</div>
 						</div>
-						<div class="row form-group">
-							<label for="email" class="col-sm-3 control-label text-right">Email:</label>
-							<div class="col-sm-9">
+						<div class="form-group">
+							<label for="email">Email:</label>
                             <input type="text" class="form-control" name = "email" id="email"/>
-							</div>
 						</div>
-                        <button type="submit" class="btn btn-default" name="btn-signup">Sign Up</button>
-						<br><br>
-                        <p class="help-block">Already registered? <a href="login.php">Sign in here.</a></p>
+                        <button type="submit" class="btn btn-default center-block" name="btn-signup">Sign Up</button>
+						<br>
+                        <p class="help-block text-center">Already registered? <a href="login.php">Sign in here.</a></p>
 					</fieldset>
                     </form>
                 </div>

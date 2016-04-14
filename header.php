@@ -23,7 +23,9 @@
     </head>
 
 
-    <body class="image-bg-fluid-height">
+
+
+    <body>
 
             <!-- Navigation -->
                     <!-- Navigation -->
@@ -46,7 +48,7 @@
                                             <a href="home.php">Home</a>
                                          </li>
                                          <li>
-                                            <a href="contactus.php">Contact Us</a>
+                                            <a href="gameinfo.php">Game Info</a>
                                          </li>
                                          <li>
                                             <a href="aboutus.php">About Us</a>
@@ -72,7 +74,7 @@
                                          <li class="active">
 
 
-                                                 <a href="register.php">  Register</a>
+                                                 <a href="registration.php">  Register</a>
                                          </li>
                                          <?php else : ?>
                                          <li class="nav navbar-text">

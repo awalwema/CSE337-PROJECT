@@ -40,20 +40,20 @@ if (isset($_POST['sign-in'])) {
                 <div class="row">
 					<div class="col-lg-4"></div>
                     <div class="panel panel-success col-lg-4">                    
-                        <div class="panel-heading"><h2>Log In</h2></div>
+                        <div class="panel-heading text-center"><h2>Log In</h2></div>
 						<br>
 						<form role="form" method="post">
 							<div class="form-group">
 								<label for="username">Username:</label>
-								<input type="text" class="form-control" name="username" id="username" placeholder="Username"/>
+								<input type="text" class="form-control" name="username" id="username"/>
 							</div>
 							<div class="form-group">
 								<label for="password">Password:</label>
-								<input type="password" class="form-control" name="password" id="password" placeholder="Password"/>
+								<input type="password" class="form-control" name="password" id="password"/>
 							</div>
-							<button type="submit" class="btn btn-default" name="sign-in">Login</button>
-							<br><br>
-							<p class="help-block">Not registered? <a href="registration.php">Create an account.</a></p>
+							<button type="submit" class="btn btn-default center-block" name="sign-in">Login</button>
+							<br>
+							<p class="help-block text-center">Not registered? <a href="registration.php">Create an account.</a></p>
 						</form>
 					</div>
 					<div class="col-lg-4"></div>
