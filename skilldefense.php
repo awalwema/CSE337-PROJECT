@@ -80,12 +80,11 @@ $will = $row2['CHARACTER_WILL'];
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="section-heading text-danger">Edit Your Character</h1><br>
+                        <h1 class="section-heading text-success">Edit Your Character</h1><br>
 
-                        <div class="panel panel-warning">
+                        <div class="panel panel-success">
 
-                        <h3 class="text-warning panel-heading">Skills & Defenses</a></h3>
-                        <br>
+                        <h3 class="panel-heading">Skills & Defenses</a></h3>
                             <?php
                             if(isset($_POST["submit"])) {
 
@@ -129,11 +128,11 @@ $will = $row2['CHARACTER_WILL'];
                             ?>
                             <br>
                         <form class="form-horizontal" action= "skilldefense.php?id=<?php echo $character_id ?>" method = "POST">
-                            <h1>Skill Points:
+                            <h3>Skill Points:
                             <input type="text" id="total" style="border: none" readonly
-                                   value= '<?php echo $unusedPoints ?>' /> </h1>
+                                   value= '<?php echo $unusedPoints ?>' /> </h3>
                             <br>
-                            <h1>Skills</h1>
+                            <h3>Skills</h3>
                             <br>
                             <div class="text">
                                 <label for="acrobatics"> Acrobatics: &nbsp</label>
@@ -207,7 +206,7 @@ $will = $row2['CHARACTER_WILL'];
                                 How do you cook a decent meal? Which mushrooms are safe to eat?</p>
                             </div>
 
-                            <h1> Defenses </h1>
+                            <h3> Defenses </h3>
                             <br>
                             <div class="text">
                                 <label for= "endurance"> Endurance:   &nbsp   </label>
@@ -231,14 +230,14 @@ $will = $row2['CHARACTER_WILL'];
                              </div>
 
                             <div align="right">
-                            <input type="Submit" value="Save" name="submit" class="btn btn-primary">
+                            <input type="Submit" value="Save" name="submit" class="btn btn-default">
                             </div>
 
 
                         </form>
                         <br>
                             <div>
-                                    <button type="button" class="btn btn-warning pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
+                                    <button type="button" class="btn btn-success pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
                             </div>
 
                         </div>
@@ -246,28 +245,6 @@ $will = $row2['CHARACTER_WILL'];
                 </div>
             </div>
         </section>
-
-
-
-        <!-- Fixed Height Image Aside -->
-            <!-- Image backgrounds are set within the full-width-pics.css file. -->
-
-
-            <!-- Content Section -->
-            <!-- Content Section -->
-
-            <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; 2016</p>
-                    </div>
-                </div>
-                    <!-- /.row -->
-            </div>
-                <!-- /.container -->
-        </footer>
 
             <!-- jQuery -->
         <script src='@routes.Assets.versioned("public/javascripts/jquery.js")'></script>

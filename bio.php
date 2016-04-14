@@ -26,11 +26,11 @@ if ($character_id == 0){
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="section-heading text-danger">Edit Your Character</h1><br>
+                        <h1 class="section-heading text-success">Edit Your Character</h1><br>
 
-                        <div class="panel panel-warning">
+                        <div class="panel panel-success">
 
-                        <h3 class="text-warning panel-heading">Bio</a></h3>
+                        <h3 class="panel-heading">Bio</a></h3>
                         <br><br>
                             <form action= "bio.php?id=<?php echo $character_id ?>" method = "POST">
                                 <label>Name:</label>
@@ -73,38 +73,16 @@ $get_name = $row['CHARACTER_NAME']; echo $get_name;?></textarea>
                                 }
 
                                     ?>
-                                <td><input type="Submit" value="Save" name="submit" class="btn btn-primary"></td>
+                                <td><input type="Submit" value="Save" name="submit" class="btn btn-default"></td>
                             </form>
 
                         </div>
-                        <button type="button" class="btn btn-warning pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
+                        <button type="button" class="btn btn-success pull-right"><a href="charactersheet.php?id=<?php echo $character_id ?>">Back to Character Sheet</a></button>
 
                     </div>
                 </div>
             </div>
         </section>
-
-
-
-        <!-- Fixed Height Image Aside -->
-            <!-- Image backgrounds are set within the full-width-pics.css file. -->
-
-
-            <!-- Content Section -->
-            <!-- Content Section -->
-
-            <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; 2016</p>
-                    </div>
-                </div>
-                    <!-- /.row -->
-            </div>
-                <!-- /.container -->
-        </footer>
 
             <!-- jQuery -->
         <script src='@routes.Assets.versioned("public/javascripts/jquery.js")'></script>

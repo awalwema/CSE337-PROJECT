@@ -21,11 +21,11 @@ $username = $_SESSION['username'];
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="section-heading text-danger">Your Character: <?php $query_INFO = mysql_query("SELECT * FROM character_main WHERE USER_ID = '$usr_id' AND CHARACTER_ID = '$character_id'");
+                        <h1 class="section-heading text-success">Your Character: <?php $query_INFO = mysql_query("SELECT * FROM character_main WHERE USER_ID = '$usr_id' AND CHARACTER_ID = '$character_id'");
                              $row = mysql_fetch_array($query_INFO); $get_name = $row['CHARACTER_NAME']; echo $get_name; ?></h1><br>
 
-                        <div class="panel panel-info">
-                        <h3>Character's Picture</h3>
+                        <div class="panel panel-success">
+                        <div class="panel-heading"><h3>Character's Picture</h3></div>
 
                         <?php
                         
@@ -163,28 +163,6 @@ if ($uploadOk == 0) {
                 </div>
             </div>
         </section>
-
-
-
-        <!-- Fixed Height Image Aside -->
-            <!-- Image backgrounds are set within the full-width-pics.css file. -->
-
-
-            <!-- Content Section -->
-            <!-- Content Section -->
-
-            <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <p>Copyright &copy; 2016</p>
-                    </div>
-                </div>
-                    <!-- /.row -->
-            </div>
-                <!-- /.container -->
-        </footer>
 
             <!-- jQuery -->
         <script src='@routes.Assets.versioned("public/javascripts/jquery.js")'></script>
