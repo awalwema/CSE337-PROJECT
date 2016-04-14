@@ -9,6 +9,7 @@ $query_ID = mysql_query("SELECT USER_ID FROM USER WHERE USER_SCREENNAME = '$user
 $row = mysql_fetch_array($query_ID);
 $usr_id= $row['USER_ID'];
 $character_id = $_GET['id'];
+$username = $_SESSION['username'];
 ?>
 
 <html lang="en">
@@ -25,6 +26,36 @@ $character_id = $_GET['id'];
 
                         <div class="panel panel-info">
                         <h3>Character's Picture</h3>
+
+                        <?php
+                        
+                        if ($character_id != 0)
+                        {
+                        
+                        
+                        // Create directory if it does not exist
+                        if(is_dir("uploads/". $username ."/".$character_id . "/")) {
+
+                            $target_dir = "uploads/" . $username . "/".$character_id . "/";
+                            
+                            $get_pic = $row['CHARACTER_PIC'];
+                            $target_file = "Class-Project/uploads/" . $username . "/".$character_id . "/" . $get_pic;
+
+
+                            echo '
+                                <section>
+                                  <img src="http://localhost/' . $target_file . ' "
+                                </section>';
+                            echo '<br>';
+                        }
+                        
+
+
+                    }
+
+
+                        ?>
+
                         <p>
                             <form action="charactersheet.php?id=<?php echo $character_id ?>" method="post" enctype="multipart/form-data">
                             Select your character's image to upload:
@@ -34,7 +65,7 @@ $character_id = $_GET['id'];
 
 <?php
 
-$username = $_SESSION['username'];
+
 $oldmask = umask(0);
 // Create directory if it does not exist
 if(!is_dir("uploads/". $username ."/".$character_id . "/")) {
@@ -80,6 +111,13 @@ if ($uploadOk == 0) {
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+
+        $character_name = basename($_FILES["fileToUpload"]["name"]);
+
+        mysql_query("UPDATE character_main
+        SET CHARACTER_PIC = '$character_name'
+        WHERE USER_ID = '$usr_id' AND CHARACTER_ID= '$character_id'");
+
          header('Location:bio.php?id=' . $character_id . '');
     } else {
         echo "Sorry, there was an error uploading your file.";
